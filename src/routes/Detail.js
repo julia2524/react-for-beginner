@@ -6,7 +6,7 @@ function Detail() {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [movie, setMovie] = useState([]);
-  const getMovie = async () => {
+  const getMovie = async (id, setMovie, setIsLoading) => {
     const response = await fetch(
       `https://yts.mx/api/v2/movie_details.json?movie_id=${id}`
     );
@@ -15,8 +15,8 @@ function Detail() {
     setIsLoading(false);
   };
   useEffect(() => {
-    getMovie();
-  }, []);
+    getMovie(id, setMovie, setIsLoading);
+  }, [id, setMovie, setIsLoading]);
   return (
     <div>
       {isLoading ? (
