@@ -1,0 +1,21 @@
+.movies {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 15px;
+}
+.movie__img {
+  max-width: 120px;
+  width: 100%;
+}
+
+.movies__info {
+  padding: 25px;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+
+.movie__meta {
+  color: rgba(0, 0, 0, 0.5);
+}
